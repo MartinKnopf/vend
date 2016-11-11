@@ -12,4 +12,8 @@ RUN gem install sass
 
 RUN npm install
 
-RUN sass public/stylesheets/style.sass:public/stylesheets/style.css
+#RUN sass public/stylesheets/style.sass:public/stylesheets/style.css
+
+RUN cd public/
+
+RUN npm install
