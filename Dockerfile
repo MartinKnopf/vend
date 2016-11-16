@@ -1,6 +1,10 @@
 FROM buildpack-deps:jessie
 
-MAINTAINER Martin Knopf <m@flatbutton.co>
+MAINTAINER Martin Knopf <martin.knopf@payone.de>
+
+# ---------------------------------------------------------
+# NODEJS stuff
+# ---------------------------------------------------------
 
 RUN groupadd -r node && useradd -r -g node node
 
@@ -30,6 +34,10 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
   && rm "node-v$NODE_VERSION-linux-x64.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
+# ---------------------------------------------------------
+# APP stuff
+# ---------------------------------------------------------
+
 WORKDIR /app
 
 COPY . /app
@@ -38,7 +46,7 @@ RUN rm -rf /app/public/node_modules
 
 RUN apt-get update && apt-get install -y npm ruby ruby-dev
 RUN gem install sass
-RUN npm install --global gulp-cli
+RUN npm install --global gulp-cli mocha
 RUN npm install
 
 #RUN sass public/stylesheets/style.sass:public/stylesheets/style.css
