@@ -1,4 +1,5 @@
-# DOCKER + DOCKER-COMPOSE + NODE + EXPRESS + VUE.JS + GULP
+# VEND
+> VUE.JS + EXPRESS + NODE + DOCKER
 
 ## Build Setup
 
@@ -19,7 +20,7 @@ sh app.sh dev "npm run start"
 sh app.sh prod
 ```
 
-Using a shell inside the container you can fo the following:
+Using a shell inside the container you can do the following:
 
 ``` bash
 # start the DEV server with 
