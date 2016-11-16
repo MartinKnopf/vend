@@ -52,3 +52,5 @@ RUN npm install
 #RUN sass public/stylesheets/style.sass:public/stylesheets/style.css
 
 RUN cd public && npm install
+
+RUN cd /app && gulp build
