@@ -6,7 +6,7 @@ usage(){
   echo "Commands:"
   echo "    clean     removes all docker images and containers of this app"
   echo "    build     builds the docker image"
-  echo "    run       starts the docker container and runs the given ARG"
+  echo "    dev       starts the docker container and runs the given ARG"
   exit 1
 }
 
