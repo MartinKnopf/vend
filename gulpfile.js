@@ -1,14 +1,13 @@
 var gulp = require('gulp'),
-    nodemon = require('gulp-nodemon'),
-    watch = require('gulp-watch'),
-    exec = require('child_process').exec
-    ;
+  nodemon = require('gulp-nodemon'),
+  watch = require('gulp-watch'),
+  exec = require('child_process').exec;
 
 // ------------------------------------------------------------------------------------
 // TESTING
 // ------------------------------------------------------------------------------------
 
-gulp.task('test', function() {
+gulp.task('test', function () {
   console.log('> -----------------------------------------');
   console.log('> running backend unit tests...');
   console.log('> -----------------------------------------');
@@ -16,7 +15,7 @@ gulp.task('test', function() {
     console.log(stdout);
     console.log(stderr);
 
-    if(!err) {
+    if (!err) {
       console.log('> -----------------------------------------');
       console.log('> running frontend unit tests...');
       console.log('> -----------------------------------------');
@@ -54,7 +53,7 @@ gulp.task('test-frontend', function () {
 // BUILD
 // ------------------------------------------------------------------------------------
 
-gulp.task('build', function() {
+gulp.task('build', function () {
   console.log('> -----------------------------------------');
   console.log('> running backend unit tests...');
   console.log('> -----------------------------------------');
@@ -62,7 +61,7 @@ gulp.task('build', function() {
     console.log(stdout);
     console.log(stderr);
 
-    if(!err) {
+    if (!err) {
       console.log('> -----------------------------------------');
       console.log('> running frontend unit tests...');
       console.log('> -----------------------------------------');
@@ -70,7 +69,7 @@ gulp.task('build', function() {
         console.log(stdout);
         console.log(stderr);
 
-        if(!err) {
+        if (!err) {
           console.log('> -----------------------------------------');
           console.log('> building frontend');
           console.log('> -----------------------------------------');
