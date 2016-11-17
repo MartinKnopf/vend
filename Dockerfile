@@ -42,15 +42,15 @@ WORKDIR /app
 
 COPY . /app
 RUN rm -rf /app/node_modules
-RUN rm -rf /app/public/node_modules
+RUN rm -rf /app/public/vue/node_modules
 
 RUN apt-get update && apt-get install -y npm ruby ruby-dev
 RUN gem install sass
-RUN npm install --global gulp-cli mocha
+RUN npm install --global gulp-cli mocha nodemon
 RUN npm install
 
 #RUN sass public/stylesheets/style.sass:public/stylesheets/style.css
 
-RUN cd public && npm install
+RUN cd public/vue && npm install
 
 RUN cd /app && gulp build

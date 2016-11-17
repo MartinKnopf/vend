@@ -46,13 +46,13 @@ elif [ $1 = "dev" ]; then
 
         echo 'starting container...'
 
-        docker run -it -p 3000:3000 -v `pwd`:/app -v /app/node_modules -v /app/public/node_modules app:latest $2
+        docker run -it -p 3000:3000 -v `pwd`:/app -v /app/node_modules -v /app/public/vue/node_modules app:latest $2
 
     else
 
         echo 'starting container...'
 
-        docker run -it -p 3000:3000 -v `pwd`:/app -v /app/node_modules -v /app/public/node_modules app:latest /bin/bash
+        docker run -it -p 3000:3000 -v `pwd`:/app -v /app/node_modules -v /app/public/vue/node_modules app:latest /bin/bash
 
     fi
 
