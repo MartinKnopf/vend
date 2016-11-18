@@ -15,15 +15,15 @@ gulp.task('test', function () {
     console.log(stdout);
     console.log(stderr);
 
-    // if (!err) {
-    //   console.log('> -----------------------------------------');
-    //   console.log('> running frontend unit tests...');
-    //   console.log('> -----------------------------------------');
-    //   exec('npm run unit', { cwd: 'public/vue' }, function (err, stdout, stderr) {
-    //     console.log(stdout);
-    //     console.log(stderr);
-    //   });
-    // }
+    if (!err) {
+      console.log('> -----------------------------------------');
+      console.log('> running frontend unit tests...');
+      console.log('> -----------------------------------------');
+      exec('npm run unit', { cwd: 'public/vue' }, function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+      });
+    }
   });
 });
 
@@ -61,25 +61,25 @@ gulp.task('build', function () {
     console.log(stdout);
     console.log(stderr);
 
-    // if (!err) {
-    //   console.log('> -----------------------------------------');
-    //   console.log('> running frontend unit tests...');
-    //   console.log('> -----------------------------------------');
-    //   exec('npm run unit', { cwd: 'public/vue' }, function (err, stdout, stderr) {
-    //     console.log(stdout);
-    //     console.log(stderr);
+    if (!err) {
+      console.log('> -----------------------------------------');
+      console.log('> running frontend unit tests...');
+      console.log('> -----------------------------------------');
+      exec('npm run unit', { cwd: 'public/vue' }, function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
 
-    //     if (!err) {
-    //       console.log('> -----------------------------------------');
-    //       console.log('> building frontend');
-    //       console.log('> -----------------------------------------');
-    //       exec('npm run build', { cwd: 'public/vue' }, function (err, stdout, stderr) {
-    //         console.log(stdout);
-    //         console.log(stderr);
-    //       });
-    //     }
-    //   });
-    // }
+        if (!err) {
+          console.log('> -----------------------------------------');
+          console.log('> building frontend');
+          console.log('> -----------------------------------------');
+          exec('npm run build', { cwd: 'public/vue' }, function (err, stdout, stderr) {
+            console.log(stdout);
+            console.log(stderr);
+          });
+        }
+      });
+    }
   });
 });
 
